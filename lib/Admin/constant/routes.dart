@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:land_registration/Admin/screens/land_inspector_dashboard.dart';
 import 'package:land_registration/Admin/screens/user_dashboard.dart';
 import 'package:land_registration/Admin/screens/addLandInspector.dart';
-import 'package:land_registration/Admin/screens/home_page.dart';
+import 'package:land_registration/home_page.dart';
 import 'package:land_registration/Admin/screens/registerUser.dart';
 import 'package:land_registration/Admin/screens/wallet_connect.dart';
 

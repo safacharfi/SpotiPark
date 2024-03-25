@@ -5,6 +5,9 @@ import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'Admin/constant/routes.dart';
 import 'Admin/providers/MetamaskProvider.dart';
+import 'User/Authentification/UserLinking.dart';
+import '/User/booking/ContractLinking.dart';
+import '/User/balance/BalanceLinking.dart' as BalanceBooking;
 
 void main() {
   setPathUrlStrategy();
@@ -35,6 +38,12 @@ class _MyAppState extends State<MyApp> {
         ChangeNotifierProvider<LandRegisterModel>(
           create: (context) => LandRegisterModel(),
         ),
+                ChangeNotifierProvider(create: (_) => UserController()),
+                                ChangeNotifierProvider(create: (_) => UserController()),
+                   ChangeNotifierProvider(create: (_) => BalanceBooking.ContractLinking()), // Utilisation de l'alias pour le package de réservation
+        ChangeNotifierProvider(create: (_) => ContractLinking()),
+
+
         ChangeNotifierProvider<MetaMaskProvider>(
           create: (context) => MetaMaskProvider()..init(),
         ),
